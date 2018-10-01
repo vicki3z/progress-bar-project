@@ -1,7 +1,7 @@
 .button {
   padding: 15px 40px;
   border-radius: 25px;
-  background-color: #2e5266;
+  background-color: $primary-color;
   color: #fff;
   max-width: 50px;
   cursor: pointer;
@@ -12,6 +12,6 @@
   }
 
   &:hover {
-    background-color: #6e8898;
+    background-color: $secondary-color;
   }
 }

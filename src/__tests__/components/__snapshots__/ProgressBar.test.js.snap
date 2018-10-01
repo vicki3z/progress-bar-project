@@ -17,20 +17,42 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <span />,
+      "children": Array [
+        <span
+          data-progress="progress-value"
+        />,
+        <span
+          data-progress="limit-value"
+        />,
+      ],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": undefined,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "data-progress": "progress-value",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "span",
       },
-      "ref": null,
-      "rendered": null,
-      "type": "span",
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "data-progress": "limit-value",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "span",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -39,20 +61,42 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <span />,
+        "children": Array [
+          <span
+            data-progress="progress-value"
+          />,
+          <span
+            data-progress="limit-value"
+          />,
+        ],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "data-progress": "progress-value",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "span",
         },
-        "ref": null,
-        "rendered": null,
-        "type": "span",
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "data-progress": "limit-value",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "span",
+        },
+      ],
       "type": "div",
     },
   ],

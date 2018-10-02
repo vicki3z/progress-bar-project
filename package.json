@@ -92,6 +92,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",

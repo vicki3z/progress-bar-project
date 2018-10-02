@@ -1,30 +1,102 @@
 import React, { Component } from "react";
 import styles from "./App.module.scss";
 
+import axios from "axios";
+
 import Button from "./components/Button";
 import ProgressBar from "./components/ProgressBar";
 
 class App extends Component {
   state = {
     progress: 62,
-    limit: 230
+    limit: 230,
+    isLoading: false,
+    buttons: [],
+    bars: [],
+    selectedBar: 1
   };
 
-  handleClick(value) {
+  UNSAFE_componentWillMount() {
     this.setState({
       ...this.state,
-      progress:
-        this.state.progress + value <= 0 ? 0 : this.state.progress + value
+      isLoading: true
+    });
+
+    axios.get("http://pb-api.herokuapp.com/bars").then(response => {
+      console.log(response);
+
+      this.setState({
+        ...this.state,
+        isLoading: false
+      });
+
+      this.initialiseProgressBar(response.data);
     });
   }
+
+  initialiseProgressBar(data) {
+    this.setState({
+      ...this.state,
+      buttons: data.buttons,
+      bars: data.bars,
+      limit: data.limit
+    });
+  }
+
+  handleClick(value) {
+    let tempBars = this.state.bars;
+    tempBars[this.state.selectedBar - 1] =
+      tempBars[this.state.selectedBar - 1] + value <= 0
+        ? 0
+        : tempBars[this.state.selectedBar - 1] + value;
+    this.setState({
+      ...this.state,
+      bars: tempBars
+    });
+  }
+
+  handleSelect(value) {
+    this.setState({
+      ...this.state,
+      selectedBar: value
+    });
+  }
+
   render() {
-    const { progress, limit } = this.state;
+    const { limit, buttons, bars, isLoading, selectedBar } = this.state;
     return (
       <div className={styles.app}>
         Progress Bar
-        <Button buttonValue={10} onClick={() => this.handleClick(10)} />
-        <Button buttonValue={-10} onClick={() => this.handleClick(-10)} />
-        <ProgressBar progressValue={progress} limit={limit} />
+        {!isLoading && (
+          <div>
+            <div>
+              <select
+                value={selectedBar}
+                onChange={event => this.handleSelect(event.target.value)}
+              >
+                {bars.map((bar, index) => (
+                  <option value={index + 1} key={index}>
+                    Progress Bar {index + 1}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              {bars.map((bar, index) => (
+                <ProgressBar progressValue={bar} limit={limit} key={index} />
+              ))}
+            </div>
+            <div className={styles.buttonsWrapper}>
+              {buttons.map((button, index) => (
+                <Button
+                  buttonValue={button}
+                  key={index}
+                  onClick={() => this.handleClick(button)}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

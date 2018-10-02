@@ -66,13 +66,14 @@ class App extends Component {
     const { limit, buttons, bars, isLoading, selectedBar } = this.state;
     return (
       <div className={styles.app}>
-        Progress Bar
+        <h1>Progress Bar</h1>
         {!isLoading && (
           <div>
-            <div>
+            <div className={styles.inputDropdownWrapper}>
               <select
                 value={selectedBar}
                 onChange={event => this.handleSelect(event.target.value)}
+                className={styles.inputDropdown}
               >
                 {bars.map((bar, index) => (
                   <option value={index + 1} key={index}>

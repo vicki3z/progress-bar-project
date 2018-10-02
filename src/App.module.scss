@@ -1,32 +1,55 @@
 .app {
   text-align: center;
-}
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 8%;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @include small {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.inputDropdown {
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  box-sizing: content-box;
+  width: 95%;
+  padding: 8px 0 8px 10px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  cursor: pointer;
+  font-size: 1em;
+
+  &Wrapper {
+    border: 1px solid #bcbcbc;
+    position: relative;
+    width: 30%;
+    margin: 0 auto 2em auto;
+    min-width: 290px;
+
+    &:after {
+      content: "\005E";
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      pointer-events: none;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.buttonsWrapper {
+  @include flex(row, space-evenly);
+  margin-top: 3em;
+
+  @include small {
+    flex-wrap: wrap;
+
+    & > div {
+      margin: 0 20px 10px 20px;
+    }
   }
 }

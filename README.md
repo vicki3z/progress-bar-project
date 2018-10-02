@@ -15,7 +15,17 @@ This app built using ReactJS powered by Create-React-App.
 
 ## Commands
 
+#### Development
+
 ```
 yarn
 yarn start
+```
+
+#### Production
+
+```
+yarn
+yarn build
+yarn start:prod
 ```

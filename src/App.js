@@ -64,6 +64,7 @@ class App extends Component {
 
   render() {
     const { limit, buttons, bars, isLoading, selectedBar } = this.state;
+    console.log(selectedBar);
     return (
       <div className={styles.app}>
         <h1>Progress Bar</h1>

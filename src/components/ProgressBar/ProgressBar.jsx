@@ -39,11 +39,11 @@ class ProgressBar extends Component {
   }
 
   render() {
-    const { progressValue, limit } = this.props;
+    const { progressValue, limit, style } = this.props;
     const { percentage } = this.state;
 
     return (
-      <div className={styles.progressBar}>
+      <div className={styles.progressBar} style={style}>
         <div
           className={
             percentage > 100

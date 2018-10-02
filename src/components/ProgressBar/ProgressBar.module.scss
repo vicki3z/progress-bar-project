@@ -1,0 +1,30 @@
+.progressBar {
+  background-color: #fafafa;
+  border-radius: 40px;
+  margin-top: 10px;
+  position: relative;
+
+  .progress {
+    background-color: $secondary-color;
+    height: 30px;
+    border-radius: 40px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-out;
+
+    &.overLimit {
+      background-color: #ff5252;
+    }
+  }
+
+  &Value {
+    position: absolute;
+    top: 25%;
+  }
+}
+
+.hide {
+  display: none;
+}

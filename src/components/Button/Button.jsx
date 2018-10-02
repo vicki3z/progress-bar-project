@@ -2,8 +2,8 @@ import React from "react";
 
 import styles from "./Button.module.scss";
 
-const Button = ({ buttonValue }) => (
-  <div className={styles.button}>
+const Button = ({ buttonValue, ...rest }) => (
+  <div className={styles.button} {...rest}>
     <span>{buttonValue}</span>
   </div>
 );

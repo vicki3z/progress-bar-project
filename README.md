@@ -5,19 +5,17 @@ User will be able to manipulate the progress bar differently by clicking on each
 
 This app built using ReactJS powered by Create-React-App.
 
-## Commands
+## Tech Stack
 
-#### Development
+    * ReactJS
+    * Axios
+    * CSS-modules
+    * SCSS
+    * Flexbox
+
+## Commands
 
 ```
 yarn
 yarn start
-```
-
-#### Production
-
-```
-yarn
-yarn build
-yarn start:prod
 ```

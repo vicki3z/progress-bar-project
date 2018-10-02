@@ -43,12 +43,17 @@ class App extends Component {
     });
   }
 
+  calculateBarValue(currentValue, newValue) {
+    return currentValue + newValue <= 0 ? 0 : currentValue + newValue;
+  }
+
   handleClick(value) {
     let tempBars = this.state.bars;
-    tempBars[this.state.selectedBar - 1] =
-      tempBars[this.state.selectedBar - 1] + value <= 0
-        ? 0
-        : tempBars[this.state.selectedBar - 1] + value;
+    tempBars[this.state.selectedBar - 1] = this.calculateBarValue(
+      tempBars[this.state.selectedBar - 1],
+      value
+    );
+
     this.setState({
       ...this.state,
       bars: tempBars
@@ -64,7 +69,6 @@ class App extends Component {
 
   render() {
     const { limit, buttons, bars, isLoading, selectedBar } = this.state;
-    console.log(selectedBar);
     return (
       <div className={styles.app}>
         <h1>Progress Bar</h1>

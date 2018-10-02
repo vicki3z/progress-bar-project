@@ -18,27 +18,27 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        "Progress Bar",
-        <Button
-          buttonValue={10}
-        />,
+        <h1>
+          Progress Bar
+        </h1>,
+        false,
       ],
       "className": undefined,
     },
     "ref": null,
     "rendered": Array [
-      "Progress Bar",
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "buttonValue": 10,
+          "children": "Progress Bar",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "Progress Bar",
+        "type": "h1",
       },
+      false,
     ],
     "type": "div",
   },
@@ -49,27 +49,27 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          "Progress Bar",
-          <Button
-            buttonValue={10}
-          />,
+          <h1>
+            Progress Bar
+          </h1>,
+          false,
         ],
         "className": undefined,
       },
       "ref": null,
       "rendered": Array [
-        "Progress Bar",
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "buttonValue": 10,
+            "children": "Progress Bar",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "Progress Bar",
+          "type": "h1",
         },
+        false,
       ],
       "type": "div",
     },

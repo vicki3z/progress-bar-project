@@ -21,6 +21,13 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          style={
+            Object {
+              "width": "10%",
+            }
+          }
+        />,
         <span
           data-progress="progress-value"
         >
@@ -35,8 +42,11 @@ ShallowWrapper {
           data-progress="percentage"
         >
           10
+          %
         </span>,
       ],
+      "className": undefined,
+      "style": undefined,
     },
     "ref": null,
     "rendered": Array [
@@ -45,7 +55,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": undefined,
+          "style": Object {
+            "width": "10%",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": 20,
+          "className": undefined,
           "data-progress": "progress-value",
         },
         "ref": null,
@@ -58,6 +83,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": 200,
+          "className": undefined,
           "data-progress": "limit-value",
         },
         "ref": null,
@@ -69,11 +95,18 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": 10,
+          "children": Array [
+            10,
+            "%",
+          ],
+          "className": undefined,
           "data-progress": "percentage",
         },
         "ref": null,
-        "rendered": 10,
+        "rendered": Array [
+          10,
+          "%",
+        ],
         "type": "span",
       },
     ],
@@ -86,6 +119,13 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            style={
+              Object {
+                "width": "10%",
+              }
+            }
+          />,
           <span
             data-progress="progress-value"
           >
@@ -100,8 +140,11 @@ ShallowWrapper {
             data-progress="percentage"
           >
             10
+            %
           </span>,
         ],
+        "className": undefined,
+        "style": undefined,
       },
       "ref": null,
       "rendered": Array [
@@ -110,7 +153,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": undefined,
+            "style": Object {
+              "width": "10%",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": 20,
+            "className": undefined,
             "data-progress": "progress-value",
           },
           "ref": null,
@@ -123,6 +181,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": 200,
+            "className": undefined,
             "data-progress": "limit-value",
           },
           "ref": null,
@@ -134,11 +193,18 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": 10,
+            "children": Array [
+              10,
+              "%",
+            ],
+            "className": undefined,
             "data-progress": "percentage",
           },
           "ref": null,
-          "rendered": 10,
+          "rendered": Array [
+            10,
+            "%",
+          ],
           "type": "span",
         },
       ],
